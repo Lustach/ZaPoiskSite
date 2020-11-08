@@ -1,2 +1,17 @@
 @import "vars.scss";
-@import '/node_modules/reset-css/sass/reset';
+@import './node_modules/reset-css/sass/reset';
+
+.test{
+  color: black;
+}
+body,button{
+  overflow-x: hidden;
+  font-family: 'PT Sans', serif;
+}
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/footer";
+@import "blocks/button";
+@import "blocks/engine";
+@import "blocks/cases";

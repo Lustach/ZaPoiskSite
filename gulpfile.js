@@ -12,14 +12,14 @@ let path = {
 	},
 	src: {
 		html: source_folder + '/*.html',
-		css: source_folder + '/css/style.less',
+		css: source_folder + '/css/style.scss',
 		js: source_folder + '/js/index.js',
 		img: source_folder + '/images/**/*.{jpg,png,webp,svg}',
 		fonts: source_folder + '/fonts/*.ttf',
 	},
 	watch: {
 		html: source_folder + '/**/*.html',
-		css: source_folder + '/css/**/*.less',
+		css: source_folder + '/css/**/*.scss',
 		js: source_folder + '/js/**/*.js',
 		img: source_folder + '/images/**/*.{jpg,png,webp,svg}',
 	},
@@ -30,7 +30,7 @@ let { src, dest } = require('gulp'),
 	gulp = require('gulp'),
 	browsersync = require('browser-sync').create(),
 	fileinclude = require('gulp-file-include'),
-	less = require('gulp-less'),
+	scss = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	group_media = require('gulp-group-css-media-queries'),// группирует media queries в конце файла - важно для производительности
 	clean_css = require('gulp-clean-css'),
@@ -69,20 +69,20 @@ function fonts() {
 // 	})).pipe(dest(path.build.img))
 // }
 function js() {
-	return src(path.src.js, { sourcemaps: true }).pipe(fileinclude()).pipe(dest(path.build.js))// две выгрузки
+	return src(path.src.js, { sourcemaps: true, }).pipe(fileinclude()).pipe(dest(path.build.js))// две выгрузки
 	.pipe(uglify())// две выгрузки
 	.pipe(rename({
 		extname: '.min.js'
 	})).pipe(dest(path.build.js, { sourcemaps: true })).pipe(browsersync.stream())
 }
 function css() {
-	return src(path.src.css).pipe(less({
+	return src(path.src.css).pipe(scss({
 			outputStyle: 'expanded'
 		})
 	).pipe(group_media()).pipe(autoprefixer({
 		overrideBrowserslist: ['last 5 versions'],
 		cascade: true
-	})).pipe(dest(path.build.css)).pipe(clean_css())//сжать
+	})).pipe(clean_css()).pipe(dest(path.build.css))//сжать
 	// .pipe(dest(path.build.css))
 	.pipe(browsersync.stream())
 }

@@ -1,0 +1,22 @@
+.button{
+  width: 195px;
+  background: #FFFFFF;
+  height: 48px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  &:hover{
+    cursor: pointer;
+    background-color: #f1f1f1;
+  }
+  img{
+    margin-right: 8px;
+  }
+  span{
+    font-size: 16px;
+    font-weight: 700;
+  }
+}

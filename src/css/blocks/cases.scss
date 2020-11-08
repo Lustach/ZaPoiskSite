@@ -1,0 +1,20 @@
+.cases__btn{
+  padding: 0;
+  width: 359px;
+  height: 74px;
+  border: 1px solid $pink-main;
+  justify-content: initial;
+  margin-right: 26px;
+  box-shadow: 0 4px 17px 0 rgba(1, 1, 1,.29);
+  img{
+    margin-left: 16px;
+  }
+  &:active{
+    background-color: #a7a7a7;
+    transition: .1s all;
+    //transform: scale(.9);
+  }
+  span{
+    font-size: 16px;
+  }
+}
