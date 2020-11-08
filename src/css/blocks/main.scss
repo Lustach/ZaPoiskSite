@@ -69,7 +69,8 @@
   }
 
   &__button_find {
-    width: 472px !important;
+    width: 100% !important;
+    max-width: 472px !important;
     height: 74px !important;
     margin: 63px auto 0 auto;
     background-color: #FFB800 !important;
@@ -80,6 +81,39 @@
     }
     &:active{
       background-color: rgb(249, 184, 0) !important;
+    }
+  }
+}
+@media (max-width: 768px){
+  .main{
+    &__inner{
+      margin: 0 15px;
+    }
+    &__title{
+      margin: 0;
+      font-size: 26px;
+      line-height: 32px;
+    }
+    &__subtitle{
+      font-size: 18px;
+      line-height: 26px;
+    }
+    &__list{
+      display: none;
+      &__title {
+        line-height: initial;
+      }
+    }
+    &__button_find{
+
+    }
+    &__cases{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .container{
+      //margin: 0 15px;
+      box-sizing: border-box;
     }
   }
 }

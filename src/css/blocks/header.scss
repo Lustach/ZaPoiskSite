@@ -31,3 +31,19 @@
     }
   }
 }
+
+@media (max-width: 768px){
+  .header{
+    &__about{
+      display: none;
+    }
+    &__inner{
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .button__login{
+    display: none;
+  }
+}

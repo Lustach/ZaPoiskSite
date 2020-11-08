@@ -18,3 +18,9 @@
     font-size: 16px;
   }
 }
+@media (max-width: 768px){
+  .cases__btn{
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
