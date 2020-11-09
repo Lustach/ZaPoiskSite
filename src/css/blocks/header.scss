@@ -22,7 +22,7 @@
       margin-top: 10px;
       margin-right: 8px;
     }
-    span{
+    #header__about_primary{
       font-style: normal;
       font-weight: bold;
       font-size: 26px;
@@ -31,7 +31,34 @@
     }
   }
 }
+@media(max-width: 1156px){
+  .header{
+    &__about{
+      font-size: 2vw;
+    }
+    #header__about_primary{
+      font-size: 2vw;
+    }
+  }
+}
 
+@media (max-width: 1034px) {
+  .header{
+    &__about{
+      font-size: 16px;
+    }
+    #header__about_primary{
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 935px) {
+  .header{
+    &__about{
+      display: none;
+    }
+  }
+}
 @media (max-width: 768px){
   .header{
     &__about{
@@ -43,6 +70,12 @@
   }
 }
 @media (max-width: 425px) {
+  .header{
+    &__inner{
+      background-color: #fff;
+      box-shadow: none;
+    }
+  }
   .button__login{
     display: none;
   }

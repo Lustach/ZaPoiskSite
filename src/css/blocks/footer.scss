@@ -7,7 +7,7 @@
     background-color: #010101;
     padding: 0 44px;
     .private{
-      margin-left: 8rem;
+      //margin-left: 8rem;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -16,10 +16,10 @@
       color: $gray-light;
     }
   }
-  img{
-    position: absolute;
-    top: -44px;
-  }
+  //img{
+  //  position: absolute;
+  //  top: -44px;
+  //}
   &__politics{
     font-weight: normal;
     font-size: 16px;
@@ -28,7 +28,27 @@
     color: white;
     text-align: center;
     text-decoration-line: underline;
-    position: absolute;
-    width: 90%;
+    //position: absolute;
+    //width: 90%;
+    display: flex;
+    width: calc(100vw - 676px);
+    flex-direction: column;
+  }
+}
+@media (max-width: 918px) {
+  .footer{
+    &__inner{
+      flex-wrap: wrap;
+      height: 100%;
+      justify-content: center;
+    }
+    &__politics {
+      width: auto;
+      margin-left: 1rem;
+    }
+  }
+  .private{
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }

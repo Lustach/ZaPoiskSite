@@ -4,7 +4,7 @@
   height: 74px;
   border: 1px solid $pink-main;
   justify-content: initial;
-  margin-right: 26px;
+  //margin-right: 26px;
   box-shadow: 0 4px 17px 0 rgba(1, 1, 1,.29);
   img{
     margin-left: 16px;
@@ -18,9 +18,43 @@
     font-size: 16px;
   }
 }
+.cases__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+@media (max-width: 1662px){
+  .wrapper_1{
+    justify-content: flex-end;
+  }
+  .wrapper_2{
+    justify-content: flex-start;
+  }
+  .cases__btn{
+    margin-bottom: 26px;
+  }
+}
+@media (max-width: 813px){
+  .cases{
+    &__btn{
+      &:first-child {
+        margin-bottom: 26px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    &__wrapper {
+      justify-content: center;
+    }
+  }
+}
 @media (max-width: 768px){
   .cases__btn{
     margin-right: 0;
     margin-bottom: 1rem;
+    padding-right: 16px;
+
   }
 }
