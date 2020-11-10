@@ -1,60 +1,109 @@
-.cases__btn{
+.cases__btn {
   padding: 0;
   width: 359px;
   height: 74px;
   border: 1px solid $pink-main;
   justify-content: initial;
   //margin-right: 26px;
-  box-shadow: 0 4px 17px 0 rgba(1, 1, 1,.29);
-  img{
-    margin-left: 16px;
+  box-shadow: 0 4px 17px 0 rgba(1, 1, 1, .29);
+
+  &:hover {
+    & svg {
+      fill: white;
+    }
+
+    background-color: rgba(229, 9, 127, 1) !important;
   }
-  &:active{
-    background-color: #a7a7a7;
+
+  svg {
+    fill: $pink-main;
+    margin-left: 8px;
+    max-height: 53px;
+    max-width: 53px;
+  }
+
+  &:active {
+    //background-color: #a7a7a7;
     transition: .1s all;
     //transform: scale(.9);
   }
-  span{
+
+  span {
     font-size: 16px;
   }
 }
-.cases__wrapper{
+
+.wrapper_2 {
+  //background-color: red;
+  .cases__btn {
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+
+.cases__wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
 }
-@media (max-width: 1662px){
-  .wrapper_1{
+
+@media (max-width: 1662px) {
+  .wrapper_1 {
     justify-content: flex-end;
   }
-  .wrapper_2{
+  .wrapper_2 {
     justify-content: flex-start;
   }
-  .cases__btn{
+  .cases__btn {
     margin-bottom: 26px;
   }
 }
-@media (max-width: 813px){
-  .cases{
-    &__btn{
+
+@media (max-width: 813px) {
+  .cases {
+    &__btn {
       &:first-child {
         margin-bottom: 26px;
       }
-      &:last-child{
+
+      &:last-child {
         margin-bottom: 0;
       }
     }
+
     &__wrapper {
       justify-content: center;
     }
   }
 }
-@media (max-width: 768px){
-  .cases__btn{
+
+@media (max-width: 768px) {
+  .cases__btn {
     margin-right: 0;
     margin-bottom: 1rem;
     padding-right: 16px;
+  }
+}
 
+@media (max-width: 425px) {
+  .cases__btn {
+    span {
+      font-size: 100%;
+    }
+
+    img {
+      margin-left: 8px;
+      //width: 50%;
+    }
+  }
+}
+
+@media (max-width: 367px) {
+  .cases__btn {
+    span {
+      font-size: 10px;
+    }
   }
 }

@@ -16,6 +16,9 @@
       color: $gray-light;
     }
   }
+  &__container{
+    max-width: 100vw;
+  }
   //img{
   //  position: absolute;
   //  top: -44px;
@@ -50,5 +53,10 @@
   .private{
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+}
+@media(max-width: 649px){
+  .footer__inner{
+    flex-direction: column;
   }
 }
