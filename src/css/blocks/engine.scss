@@ -25,7 +25,7 @@
   }
 
   &__container {
-    padding: 10px;
+    padding: 25px;
     background-image: url("../images/engineShadowGray.png");
     background-repeat: no-repeat;
     background-position: bottom;
@@ -42,12 +42,19 @@
 
   &__item {
     width: 100%;
+    max-height:150px;
+    max-width: 160px;
   }
 }
-
+@media (max-width: 1024px){
+  .engine {
+    &__container {
+      padding: 15px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .engine {
-
     &__line {
       &_first {
         justify-content: center;
@@ -72,7 +79,9 @@
         > div {
           display: flex;
           flex-direction: row;
-
+          .engine__container{
+            padding: 10px;
+          }
           &:nth-child(2) {
             margin: 0 12%;
           }
