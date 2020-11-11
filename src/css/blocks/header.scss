@@ -49,9 +49,6 @@
     & svg{
       fill: white;
     }
-    //.button__login svg{
-    //  fill: white !important;
-    //}
   }
 }
 @media(max-width: 1156px){
@@ -88,7 +85,14 @@
       display: none;
     }
     &__inner{
-      justify-content: center;
+      justify-content: space-between;
+    }
+  }
+}
+@media(min-width: 481px){
+  .header{
+    &__inner{
+      padding: 0 22px;
     }
   }
 }
@@ -97,12 +101,20 @@
     &__inner{
       background-color: #fff;
       box-shadow: none;
+      justify-content: center;
       a{
         transform: scale(.7);
       }
     }
   }
+}
+@media(max-width: 481px){
   .button__login{
     display: none;
+  }
+  .header{
+    &__inner{
+      justify-content: center;
+    }
   }
 }

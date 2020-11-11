@@ -18,7 +18,6 @@
     font-size: 26px;
     line-height: 34px;
     text-transform: initial;
-    /* identical to box height */
     text-align: center;
 
     &__accent {
@@ -66,7 +65,6 @@
     justify-content: space-between;
     margin: 0 auto;
     margin-top: 32px;
-
   }
 
   &__button_find {
@@ -76,99 +74,100 @@
     margin: 63px auto 0 auto;
     background-color: #FFB800 !important;
     border: none;
-    svg{
-      fill:#212B36;
+
+    svg {
+      fill: #212B36;
       width: 24px;
       height: 24px;
       margin-right: 17px;
     }
+
     &:hover {
-      //background-color: rgba(255, 184, 0, .9) !important;
       background-color: #e5097f !important;
-      & svg{
+
+      & svg {
         fill: white;
       }
     }
-    //&:active{
-    //  background-color: rgba(229, 9, 127, .9) !important;
-    //}
   }
 }
-
-//892
-
-@media (max-width: 918px){
-  .main{
-    &__inner{
+@media (max-width: 1289px){
+  .main__title{
+    margin: 0 60px;
+  }
+}
+@media (max-width: 918px) {
+  .main {
+    &__inner {
       margin: 48px 48px;
     }
-    &__cases{
+
+    &__cases {
       display: flex;
       flex-wrap: wrap;
     }
   }
-  .wrapper_2,.wrapper_1{
+  .wrapper_2, .wrapper_1 {
     justify-content: space-between;
     margin-bottom: 26px;
   }
-  //.cases__btn{
-  //  margin-left: 0;
-  //  margin-right: 0;
-  //}
-  //button .button .cases__btn .ml-4{
-  //  &:first-child {
-  //    margin-left: 26px;
-  //  }
-  //}
-  .ml-4,.mr-4{
+  .ml-4, .mr-4 {
     margin: 0
   }
 }
 
 
-@media (max-width: 767px){
-  .main{
-    &__inner{
+@media (max-width: 767px) {
+  .main {
+    &__inner {
       margin: 40px 25px;
     }
-    &__title{
+
+    &__title {
       margin: 0;
       font-size: 26px;
       line-height: 32px;
     }
-    &__subtitle{
+
+    &__subtitle {
       font-size: 18px;
       line-height: 26px;
     }
-    &__list{
+
+    &__list {
       display: none;
+
       &__title {
         line-height: initial;
       }
-      &__engine{
+
+      &__engine {
         margin-top: 1rem;
       }
     }
-    &__button_find{
+
+    &__button_find {
       margin-top: 20px;
     }
-    &__cases{
+
+    &__cases {
       flex-wrap: wrap;
       justify-content: center;
     }
-    .container{
-      //margin: 0 15px;
+
+    .container {
       box-sizing: border-box;
     }
   }
 }
 
-@media (max-width: 425px){
+@media (max-width: 425px) {
   .main {
     &__inner {
       margin: 0 25px;
     }
-    &__button_find{
+
+    &__button_find {
       margin-bottom: 40px;
     }
   }
