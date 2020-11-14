@@ -96,25 +96,56 @@
     }
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 767px) {
   .header{
     &__inner{
       background-color: #fff;
       box-shadow: none;
       justify-content: center;
+      height: 50px;
+      img{
+        //width: 30vw;
+        //max-width: 120px;
+      }
       a{
         transform: scale(.7);
       }
     }
   }
 }
-@media(max-width: 481px){
+@media(max-width: 767px){
+  .main__inner{
+    margin-top: 0;
+  }
   .button__login{
-    display: none;
+    display: none !important;
   }
   .header{
     &__inner{
       justify-content: center;
     }
+  }
+}
+@media(min-width: 768px) and (max-width: 935px){
+  .header {
+    &__inner{
+      height: 50px;
+    }
+    img {
+      width: 110px;
+    }
+  }
+  .button__login{
+    transform: scale(.7);
+  }
+}
+@media(min-width: 550px) and (max-width: 767px){
+  .header{
+    &__inner{
+      height: 50px;
+    }
+  }
+  .main__inner{
+    margin-top: 0;
   }
 }

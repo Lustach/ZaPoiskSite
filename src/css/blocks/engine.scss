@@ -66,7 +66,7 @@
   }
 }
 
-@media(max-width: 475px) {
+@media(max-width: 767px) {
   .engine {
     &__list {
       &__first {
@@ -79,6 +79,7 @@
         > div {
           display: flex;
           flex-direction: row;
+          justify-content: center;
           .engine__container{
             padding: 10px;
           }

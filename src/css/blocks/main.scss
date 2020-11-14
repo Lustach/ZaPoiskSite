@@ -1,15 +1,35 @@
+//$maxWidth: 1920;
+//@mixin adaptiv-font($pcSize, $mobSize) {
+//  $addSize: $pcSize - $mobSize;
+//  $addMobSize: $addSize + $addSize * 0.7;
+//  @media(max-width: 767px){
+//    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw-320px) / #{$maxWidth}));
+//  }
+//  @media(max-width: 767px){
+//    font-size: calc(#{$mobSize + px} + #{$addMobSize} * (100vw / #{$maxWidth}));
+//  }
+//  //$maxWidth: $maxWidth - 320;
+//  //font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+//}
+
+
 .main {
   &__inner {
-    margin: 48px 87.5px;
+    //margin: 48px 87.5px;
+    margin: 4.45vh 8.1vh;
   }
 
   &__title {
     font-weight: bold;
-    font-size: 48px;
+    //font-size: 48px;
     line-height: 62px;
     text-align: center;
     color: $dark;
-    margin: 0 120px;
+    //margin: 0 5vw;
+    //margin: 0 120px;
+    //@include adaptive-font(24,16);
+    font-size: 2.5vw;
+//font-size: calc(32px + 16 * (100vw/1920));
   }
 
   &__subtitle {
@@ -71,7 +91,8 @@
     width: 100% !important;
     max-width: 472px !important;
     height: 74px !important;
-    margin: 63px auto 0 auto;
+   margin: 5.5vh auto 0 auto;
+    //margin: 63px auto 0 auto;
     background-color: #FFB800 !important;
     border: none;
 
@@ -91,16 +112,30 @@
     }
   }
 }
+@media(min-width: 1920px){
+  .main{
+    &__title{
+      font-size: 48px;
+    }
+  }
+}
 @media (max-width: 1289px){
   .main__title{
-    margin: 0 60px;
+    //margin: 0 60px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 1023px) {
+  .main__subtitle{
+    font-size: 1em;
   }
 }
 @media (max-width: 918px) {
-  .main {
-    &__inner {
-      margin: 48px 48px;
+  .main{
+    &__inner{
+      margin: 10px 25px 40px;
     }
+
 
     &__cases {
       display: flex;
@@ -108,7 +143,7 @@
     }
   }
   .wrapper_2, .wrapper_1 {
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 26px;
   }
   .ml-4, .mr-4 {
@@ -119,8 +154,8 @@
 
 @media (max-width: 767px) {
   .main {
-    &__inner {
-      margin: 40px 25px;
+    &__inner{
+      margin: 10px 25px 40px;
     }
 
     &__title {
@@ -166,9 +201,27 @@
     &__inner {
       margin: 0 25px;
     }
-
+    &__title{
+      font-size: 26px;
+      //font-size: 6.2vw;
+      //font-size: calc(16px + 12 * (100vw/1920));
+      line-height: 32px;
+    }
+    &__subtitle{
+      //font-size: 14px;
+      //line-height: 16px;
+      font-size: 18px;
+    }
+    &__list__engine{
+      margin-top: 0.5rem;
+    }
+    &__cases{
+      margin-top: 1rem;
+    }
     &__button_find {
-      margin-bottom: 40px;
+      //margin-bottom: 40px;
+      height: 61px !important;
+      margin: 16px 0 29px;
     }
   }
 }

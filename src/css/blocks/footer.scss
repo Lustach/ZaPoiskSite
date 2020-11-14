@@ -1,6 +1,6 @@
 .footer {
-  position: relative;
-
+  //position: relative;
+  flex: 0 0 auto;
   &__inner {
     display: flex;
     align-items: center;
@@ -57,5 +57,6 @@
 @media(max-width: 649px) {
   .footer__inner {
     flex-direction: column;
+    padding: 10px 44px;
   }
 }

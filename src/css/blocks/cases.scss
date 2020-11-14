@@ -82,24 +82,33 @@
     padding-right: 16px;
   }
 }
-
+// фикс для кейсов
+@media(min-width:768px) and (max-width:814px){
+  .cases{
+    &__wrapper{
+      justify-content: space-evenly;
+      margin-bottom: 0;
+    }
+    &__btn {
+      width: 340px;
+    }
+  }
+}
 @media (max-width: 425px) {
+  .cases__wrapper{
+    margin-bottom: 13px;
+  }
   .cases__btn {
+    &:first-child {
+      margin-bottom: 13px;
+    }
     height: 63px;
     span {
-      font-size: 100%;
+      font-size: 3.48vw;
     }
 
     img {
       margin-left: 8px;
-    }
-  }
-}
-
-@media (max-width: 367px) {
-  .cases__btn {
-    span {
-      font-size: 10px;
     }
   }
 }

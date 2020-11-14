@@ -9,8 +9,13 @@
   <title>ZaPoisk</title>
 </head>
 <body>
-@@include('components/header.html')
-@@include('components/main.html')
-@@include('components/footer.html')
+<div class="wrapper">
+  @@include('components/header.html')
+  <div class="content">
+    @@include('components/main.html')
+  </div>
+  @@include('components/footer.html')
+
+</div>
 </body>
 </html>
