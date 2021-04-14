@@ -5,10 +5,10 @@ let source_folder = 'src'//input
 let path = {
 	build: {
 		html: project_folder + '/',
-		css: project_folder + '/css/',
-		js: project_folder + '/js/',
-		img: project_folder + '/images/',
-		fonts: project_folder + '/fonts/',
+		css: project_folder + '/static/seopage/css/',
+		js: project_folder + '/static/seopage/js/',
+		img: project_folder + '/static/seopage/images/',
+		fonts: project_folder + '/static/seopage/fonts/',
 	},
 	src: {
 		html: source_folder + '/*.html',
